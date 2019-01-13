@@ -1,0 +1,111 @@
+************ShortCutKey***********
+ctrl+shift+/ for comment in one line
+and ctrl+shift+C remove comment  
+
+
+
+*********
+command to delete files from root
+root@ginger-Vostro-3668:/usr/share# rm -r -f tomcat
+
+**********
+command to go to root from user
+sudo -i
+and from root to user
+exit
+
+**************
+command to change permission from root
+ home/ginger/tomcat# chmod -R 777 /home/ginger/tomcat
+**************
+command to extract a file
+
+suppose file is in opt folder
+/opt# tar xvzf a.tar.gz
+
+**************
+command to know ports used by different tcp and ip
+
+top
+
+**************
+command to kill that service at specific port
+  sudo kill 4198
+
+**************
+Link to install Apache tomcat from terminal in ubuntu
+https://www.howtoforge.com/tutorial/how-to-install-apache-tomcat-8-5-on-ubuntu-16-04/
+
+**************
+****Command to open mysql
+   mysql -u root -p
+  p/w 123456789
+
+*********Commands to install and configure redis server
+$sudo apt-get update 
+$sudo apt-get install redis-server
+Start Redis
+$redis-server
+Check If Redis is Working
+$redis-cli 
+This will open a redis prompt.
+
+redis 127.0.0.1:6379>
+
+
+
+redis 127.0.0.1:6379> ping 
+PONG
+This shows that Redis is successfully installed on your machine.
+*******************************
+Getting Access of other database in Redis
+ ssh ginger@192.168.0.231
+p/w123456
+*******************************
+to restart Mariadb server
+
+sudo service mariadb1 restart
+sudo service mariadb2 restart
+********************************
+file path
+https://s3.ap-south-1.amazonaws.com/247-post/152ae5ab-76b0-11e8-9679-509a4c162a2f/opt1.png
+**********************************
+To delete completely mysql-server
+sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+sudo rm -rf /etc/mysql /var/lib/mysql
+sudo apt-get autoremove
+sudo apt-get autoclean
+(https://askubuntu.com/questions/172514/how-do-i-uninstall-mysql)
+**********************************
+To completely remove mariadb from ubuntu
+sudo apt-get purge mysql-server* mariadb*
+sudo rm -rf /var/lib/mysql
+sudo rm -rf /etc/mysql
+sudo rm -rf /var/log/mysql
+
+***********************************
+To install and configure Mysql Server
+(https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

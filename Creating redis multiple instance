@@ -1,0 +1,48 @@
+*********************
+Create multiple instance of redis
+link(https://gist.github.com/inecmc/f40ca0ee622e86999d9aa016c1b15e8c)
+
+process:
+step-0 sudo install -o redis -g redis -d /var/lib/redis2
+step-1 if u have installed redis-server
+sudo cp -p /etc/redis/redis.conf /etc/redis/redis2.conf
+
+step-2
+sudo nano /etc/redis/redis2.conf
+
+pidfile /var/run/redis/redis-server2.pid
+logfile /var/log/redis/redis-server2.log
+dir /var/lib/redis2
+port 6380
+
+step-3
+
+sudo cp /lib/systemd/system/redis-server.service /lib/systemd/system/redis-server2.service
+
+step-4
+
+sudo nano /lib/systemd/system/redis-server2.service
+
+ExecStart=/usr/bin/redis-server /etc/redis/redis2.conf
+PIDFile=/var/run/redis/redis-server2.pid
+ReadWriteDirectories=-/var/lib/redis2
+Alias=redis2.service
+
+step-5
+
+sudo systemctl enable redis-server2.service
+
+
+step-6
+
+sudo systemctl start redis-server2.service
+
+step-7
+
+
+
+ps aux |grep redis
+
+
+
+
